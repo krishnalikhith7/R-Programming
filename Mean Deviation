@@ -1,0 +1,10 @@
+print("enter values in an array")
+ 
+x<- scan()
+n<- length(x) sumx<- 0
+sumdev<- 0 for(i in 1:n)
+sumx=sumx+x[i] mean<- sumx/n print(mean)
+for(i in 1:n) sumdev=sumdev+abs(x[i]-mean) print(sumdev)
+md=sumdev/n print("mean deviation") print(md)
+print("mean deviation using built in function") result<- mad(x)
+print(result)
