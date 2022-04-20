@@ -1,0 +1,10 @@
+print("enter values in array") x<- scan()
+n<- length(x) sumx<- 0
+ 
+sumxx<- 0 for(i in 1:n)
+{
+
+sumx=sumx+x[i] sumxx=sumxx+(x[i]*x[i])
+}
+mean<- sumx/n standev=sqrt((sumxx/n)-(mean*mean)) print("standard deviation is") print(standev)
+print("standard deviation using built in function is") print(sd(x))
