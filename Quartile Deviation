@@ -1,0 +1,7 @@
+print("enter values in arrays") data<-scan()
+n<-length(x)
+ 
+prod<-1 for(i in 1:n)
+prod<-prod*x[i] GM<-prod^(1/n)
+print("geometric mean") print(GM)
+print("geometric using built in functions") print(exp(mean(log(x))))
