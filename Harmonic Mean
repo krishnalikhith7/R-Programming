@@ -1,0 +1,13 @@
+print("enter values in array") data<-scan()
+n<-length(data) sum<-0
+ 
+for(i in 1:n)
+
+{
+sum=sum+(1/data[i])
+
+}
+HM<-n/sum
+
+print("harmonic mean of given values") print(HM)
+print("harmonic mean using built in function") print(n/sum((1/data)))
