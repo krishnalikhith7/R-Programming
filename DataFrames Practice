@@ -1,0 +1,77 @@
+names <- c('a','b','c','d')
+play <- c(12,23,34,45)
+win <- c(11,12,13,11)
+lost <- c(3,5,6,4)
+match <- data.frame(names,play,win,lost)
+match
+match$win
+mean(match$win)
+ratio <- match$win/match$play
+ratio
+match$ratio <- ratio
+match
+options(digits = 1)
+write.csv(match,"matches_abc.csv",row.names = F)
+x <- read.csv("matches_abc.csv")
+View(x)
+getwd()
+
+x
+x[[2]][3]
+subdata <- subset(x,
+                 play==34,
+                 select=c('names','win','lost','ratio'))
+
+subdata <- subset(x,
+                  ratio>=0.5,
+                  select=c('names','win','lost','ratio'))
+
+View(x)
+
+sub <-x[1:3,c(2,3,4)] 
+sub
+class(sub)
+ma <- as.matrix(sub)
+ma
+v <- c(1,0,0,0,1,0,0,0,1)
+mb <- matrix(v,nrow = 3,ncol = 3,byrow = T)
+mb
+ma
+ma+mb
+ma-mb
+ma%*%mb
+solve(ma)
+t(ma)
+
+
+#DATa FRAME 
+
+
+names <- c('a','b','c','d')
+gender <- c('m','f','m','m')
+x1 <- data.frame(names,gender)
+x1
+x
+write.csv(x,"x.csv",row.names = F)
+write.csv(x1,"x1.csv",row.names = F)
+a <- read.csv("x.csv")
+b <- read.csv("x1.csv")
+c <- merge(a,b,by='names')
+c
+a
+head(x,2)
+help(typeof)
+?typeof
+typeof(x) # storage element types
+summary(x)
+tail(x,2)
+str(x)
+
+
+exp(1)
+log(exp(1))
+log10(10^5)
+log(10^5,10)
+data <- c(1,2,3,4,5,4,3,4,-1,-2)
+exp(mean(log(data)))
+exp(mean(log(data[data>0]))) 
