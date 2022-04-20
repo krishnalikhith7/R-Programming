@@ -1,0 +1,9 @@
+v <- c(15,	35,	20,	10,	5	,15,	20,	15,	12,	13)
+plot(v,type="o",xlab="Year",ylab="Profit",xlim=c(1,10),ylim=c(0,40), 
+     col="green", main="RVRJC PHARMACEUTICAL FIRM")
+
+install.packages("tidyverse")
+library("tidyverse")
+v=c(12,45,3,23,12,56)
+qplot(x=v,geom="histogram")
+qplot(x=v,geom="freqpoly")
